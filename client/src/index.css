@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 84% 4.9%;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215 16% 47%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 4.9%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --primary: 217 91% 60%; /* #3B82F6 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 98%;
+  --secondary-foreground: 222 84% 4.9%;
+  --accent: 210 40% 98%;
+  --accent-foreground: 222 84% 4.9%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 217 91% 60%;
+  --radius: 0.5rem;
+  --neutral-50: 210 40% 98%; /* #F8FAFC */
+  --neutral-500: 215 16% 47%; /* #64748B */
+  --neutral-800: 222 84% 4.9%; /* #1E293B */
+  --primary-dark: 217 91% 35%; /* #1E40AF */
+  --accent-green: 160 84% 39%; /* #10B981 */
+}
+
+.dark {
+  --background: 222 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 222 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 84% 4.9%;
+  --secondary: 217 32% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 217 32% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 217 91% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+  
+  .bg-primary-dark {
+    background-color: hsl(var(--primary-dark));
+  }
+  
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+  
+  .text-primary-dark {
+    color: hsl(var(--primary-dark));
+  }
+  
+  .bg-accent-green {
+    background-color: hsl(var(--accent-green));
+  }
+  
+  .text-accent-green {
+    color: hsl(var(--accent-green));
+  }
+  
+  .bg-neutral-50 {
+    background-color: hsl(var(--neutral-50));
+  }
+  
+  .text-neutral-500 {
+    color: hsl(var(--neutral-500));
+  }
+  
+  .text-neutral-800 {
+    color: hsl(var(--neutral-800));
+  }
+}
